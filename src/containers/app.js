@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import { fetchSerie, fetchEpisodes } from 'api';
-import MoviePage from './menu_page';
+import { fetchSerie, fetchEpisodes } from '../api';
+import MenuPage from './menu_page';
 
 class App extends React.Component {
-  state = { serie: {}, episodes: [] };
+  constructor() {
+    super();
+    this.state = {
+      serie: {},
+      episodes: []
+    };
+  }
 
   async componentWillMount() {
     const serie = await fetchSerie();
@@ -15,7 +21,7 @@ class App extends React.Component {
     const { episodes, serie } = this.state;
     return (
       <div>
-        <MoviePage serie={serie} episodes={episodes} />
+        <MenuPage serie={serie} episodes={episodes} />
       </div>
     );
   }

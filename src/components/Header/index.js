@@ -3,23 +3,23 @@ import { PropTypes as T } from 'prop-types';
 import SerieStats from './stats';
 import SerieTitle from './title';
 
-const Wrapper = ({ title, year, genres }) => (
+const Wrapper = ({ title, stats }) => (
   <div className="title-wrapper">
     <SerieTitle title={title} />
-    <SerieStats year={year} genres={genres} />
+    <SerieStats stats={stats} />
   </div>
 );
 
 Wrapper.defaultProps = {
   title: '',
   year: null,
-  genres: []
+  stats: []
 };
 
 Wrapper.propTypes = {
   title: T.string,
   year: T.number,
-  genres: T.arrayOf(T.object)
+  stats: T.arrayOf(T.object)
 };
 
 export default Wrapper;
