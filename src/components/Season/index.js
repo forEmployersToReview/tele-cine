@@ -30,28 +30,30 @@ const Season = ({
   temps
 }) => (
   <div className="season-wrapper">
-    <div className="season-head">
-      <div
-        className="season-tab-wrapper"
-        onClick={() => handle_episode_expand()}
-      >
-        <Tabs
-          tab_item={'season-title'}
-          tab_list={'season-list'}
-          menu={temps}
-          handle_tab={handle_season_switch}
-          selected_tab={season_selected}
-        />
+    <div>
+      <div className="season-head">
+        <div
+          className="season-tab-wrapper"
+          onClick={() => handle_episode_expand()}
+        >
+          <Tabs
+            tab_item={'season-title'}
+            tab_list={'season-list'}
+            menu={temps}
+            handle_tab={handle_season_switch}
+            selected_tab={season_selected}
+          />
+        </div>
+        <Icon icon={'close'} target_class={'close-button'} />
       </div>
-      <Icon icon={'close'} target_class={'close-button'} />
+      <Episodes
+        episodes={episodes}
+        episode_selected={episode_selected}
+        handle_episode_expand={handle_episode_expand}
+        toggle_play_ui={toggle_play_ui}
+        button_class={button_class}
+      />
     </div>
-    <Episodes
-      episodes={episodes}
-      episode_selected={episode_selected}
-      handle_episode_expand={handle_episode_expand}
-      toggle_play_ui={toggle_play_ui}
-      button_class={button_class}
-    />
   </div>
 );
 
