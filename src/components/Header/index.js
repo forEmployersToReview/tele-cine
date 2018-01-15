@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes as T } from 'prop-types';
-import SerieStats from './stats';
+
+import SerieStats from './Stats';
 import SerieTitle from './title';
 
 const Wrapper = ({ title, stats }) => (

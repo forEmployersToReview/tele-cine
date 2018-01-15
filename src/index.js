@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import './index.css';
+import './style.css';
 import App from './containers/app';
-import registerServiceWorker from './registerServiceWorker';
+import register_service_worker from './register_service_worker';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -11,4 +11,4 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById('root')
 );
-registerServiceWorker();
+register_service_worker();

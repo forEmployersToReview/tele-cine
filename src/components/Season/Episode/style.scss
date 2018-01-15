@@ -1,0 +1,106 @@
+.shared-bar-style {
+  font-size: 16px;
+  color: #a5a5a5;
+  padding-right: 5px;
+}
+
+.vertical-separator {
+  border: 0;
+  height: 1px;
+  background: grey;
+}
+
+.bar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-left {
+  display: flex;
+  width: 100%;
+}
+
+.bar-number {
+  // Use this class for custom style.
+  @extend .shared-bar-style;
+}
+.bar-title {
+  // Use this class for custom style.
+  @extend .shared-bar-style;
+}
+
+.play-episode {
+  color: grey;
+  border-radius: 80%;
+  padding: 2px;
+  font-size: 25px;
+  border: 1px solid grey;
+  height: 25px;
+}
+
+.episode-wrapper {
+  width: 90%;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    .shared-bar-style {
+      color: white;
+    }
+  }
+}
+
+.episode-detail-synopsis {
+  color: #c0bfbf;
+  font-size: 14px;
+  width: 91.5%;
+  font-weight: 300;
+  font-family: arial;
+}
+
+.episode-duration {
+  display: flex;
+  color: #a5a5a5;
+  justify-content: flex-end;
+  font-size: 12px;
+  width: 91.5%;
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
+
+.episode-detail-image {
+  filter: brightness(150%) contrast(96%);
+  width: 91.5%;
+  border: 1px solid rgba(255, 255, 255, 0.12941176470588237);
+  border-radius: 2px;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.006);
+    border: 1px solid rgba(255, 255, 255, 0.32941176470588237);
+    color: white;
+  }
+}
+
+.play-on-image {
+  position: absolute;
+  left: 40%;
+  top: 35%;
+  font-size: 50px;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: rgba(255, 255, 255, 0.92941176470588237);
+    border: 1px solid rgba(255, 255, 255, 0.72941176470588237);
+  }
+}
+
+.play-on-image-hover {
+  transform: scale(1.006);
+  color: rgba(255, 255, 255, 0.72941176470588237);
+  border: 1px solid rgba(255, 255, 255, 0.72941176470588237);
+}
+
+.image-with-duration {
+  position: relative;
+}

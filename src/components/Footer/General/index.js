@@ -1,11 +1,11 @@
 import React from 'react';
 import Actions from './actions';
-import Sinopse from './sinopse';
+import Synopsis from './synopsis';
 
-const FooterGeneral = () => (
-  <div>
+const FooterGeneral = ({ synopsis }) => (
+  <div className="footer-general-info">
     <Actions />
-    <Sinopse />
+    <Synopsis synopsis={synopsis} />
   </div>
 );
 
