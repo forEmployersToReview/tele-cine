@@ -1,3 +1,8 @@
+@import './Awards/style.scss';
+@import './Content/style.scss';
+@import './Cast/style.scss';
+@import './General/style.scss';
+
 // Footer Container
 .serie-detailed-content {
   background: linear-gradient(
@@ -7,8 +12,7 @@
   );
   position: fixed;
   width: 100vw;
-  height: 200px;
+  height: 190px;
   bottom: 0;
   left: 0;
 }
-

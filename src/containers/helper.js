@@ -1,16 +1,15 @@
-const stats = (genres, year) => {
-  console.log(genres, 'genres')
-  if (genres && genres.length) {
-    const listID = index => `GEN-${'0' + (genres.length + index)}`.slice(-2);
+import { isEmpty } from 'lodash';
+
+export const listID = (index, length_match, ID_type) => `${ID_type}-${('0' + (length_match + index)).slice(-2)}`;
+export const stats = (genres, year) => {
+  if (!isEmpty(genres)) {
     return [
       { Title: '80% INDICADO', ID: 'GEN-00' },
-      ...genres,
-      { Title: String(year), ID: listID(1) },
-      { Title: 'EUA', ID: listID(2) },
-      { Title: '14', ID: listID(3) }
+      { Title: genres.map(({ Title }) => Title).join(' '), ID: genres[0].ID },
+      { Title: String(year), ID: listID(1, genres.length, 'GEN') },
+      { Title: 'EUA', ID: listID(2, genres.length, 'GEN') },
+      { Title: '14', ID: listID(3, genres.length, 'GEN') }
     ];
   }
-  return null;
+  return;
 };
-
-export default stats;
