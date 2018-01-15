@@ -28,8 +28,7 @@ const fetch_serie = async () => {
     for (let actor in Cast) {
       // Get Actor extra details, including their photo from TheMovieDataBase API.
       const TMDB_URL = `
-        https://api.themoviedb.org/3/search/person?api_key=${process.env
-          .REACT_APP_TMDB}&language=en-US&query=${Cast[actor]
+        https://api.themoviedb.org/3/search/person?api_key=1fdc3ffaedd179cd54271990a9781297&language=en-US&query=${Cast[actor]
         .Name}&page=1&include_adult=false
       `
       let details = await axios.get(TMDB_URL);

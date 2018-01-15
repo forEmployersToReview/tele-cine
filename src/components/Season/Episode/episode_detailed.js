@@ -9,10 +9,10 @@ import Icon from '../../Icon';
 const format_duration = duration => {
   let hour = duration,
     minute = duration;
-  if (duration > 60) {
+  if (duration > 59) {
     hour = Math.ceil(duration / 60);
     minute = Math.ceil(duration % 60);
-    return `${hour}h ${minute}min`;
+    return `${hour}h ${!!minute ? `${minute}min` : '' }`;
   }
   return `${minute}min`;
 };
@@ -29,7 +29,7 @@ const EpisodeDetailed = ({
 }) => {
   if (isEqual(EpisodeNumber, episode_selected)) {
     return (
-      <div onClick={handle_episode_expand}>
+      <div onClick={handle_episode_expand} className="episode-details-root">
         <div
           className="image-with-duration"
           onMouseLeave={() => toggle_play_ui('')}

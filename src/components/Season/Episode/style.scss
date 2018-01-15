@@ -1,3 +1,12 @@
+@keyframes slide_from_top {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .shared-bar-style {
   font-size: 16px;
   color: #a5a5a5;
@@ -8,6 +17,7 @@
   border: 0;
   height: 1px;
   background: grey;
+  margin: 2px 0;
 }
 
 .bar-wrapper {
@@ -103,4 +113,9 @@
 
 .image-with-duration {
   position: relative;
+}
+
+.episode-details-root {
+  animation: 0.5s ease-in-out 0s 1 slide_from_top;
+  margin-left: 2px;
 }
