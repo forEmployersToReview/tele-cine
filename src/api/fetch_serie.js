@@ -15,15 +15,15 @@ const fetch_serie = async () => {
 
     // I'll keep the serie Stats with capitalized letter
     // to follow the current pattern from the returned packet.
+    // Stats: The subheader analytics about the serie, (type of show, year of release, country...);
     serie_request_telecine.data.Stats = stats(Genres, Year);
 
-    // Ideal would be that the cast table contained extra information about
-    // the artist and more of a complete cast inforomation for each serie.
+    // Ideal would be that the Cast table would contain extra information about
+    // the artist and more of a complete cast information for each serie.
     // Including artist photos, and promotional banners/covers.
 
-    // Gather extra info for show from TheMovieDB (With more time
-    // I could play with this more, but that's not the point of
-    // this assessment.)
+    // Gather extra info for show from TheMovieDB
+    // Stich properties and send to client.
 
     for (let actor in Cast) {
       // Get Actor extra details, including their photo from TheMovieDataBase API.

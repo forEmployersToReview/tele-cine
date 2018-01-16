@@ -1,6 +1,8 @@
+// Modules
 import React from 'react';
-import { isEqual } from 'lodash';
 import { PropTypes as T } from 'prop-types';
+import { isEqual } from 'lodash';
+
 // The opportunity for a custom class is given to elements in here with a fallback conditioned.
 const determine_tab_selection = (default_class, tab, index) =>
   `${default_class} tab-title ${isEqual(tab, index) ? 'tab-selected' : ''}`;
@@ -27,7 +29,12 @@ const Tabs = ({
 );
 
 Tabs.propTypes = {
-  handle_tab: T.func.isRequired
+  handle_tab: T.func.isRequired,
+  menu: T.array,
+  tab_item: T.string,
+  tab_list: T.string,
+  tab_wrapper: T.string,
+  selected_tab: T.number
 };
 
 export default Tabs;

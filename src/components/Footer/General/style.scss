@@ -62,27 +62,6 @@
   border-radius: 2px;
 }
 
-// The share icon is part of a collection of icons
-// and it doesn't have a circular border like the others.
-
-
-// However, the solution below (along with lines 13~15)
-// would sufy the insertion of a circle around the icon to match it's siblings.
-// Aesthetically, I feel that making a stylistic mutation of the icon
-// for a more symmetrical ui throughout the row does not justify a better ux.
-
-// There are exceptions, specially as applications evolve
-// you want to keep components with basic style and make it reuseable/customizable at a higher level.
-
-// In the real world a designer would simply create the proper svg file if necessary.
-
 .share {
-  // border: 3px solid #515151;
-  // border-radius: 50%;
-  // margin-bottom: 4px;
-  // margin-top: 2px;
-  // font-size: 14px !important;
-  // padding: 3px;
-  // display: flex;
   font-size: 24px !important;
 }

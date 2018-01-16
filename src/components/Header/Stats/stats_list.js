@@ -11,13 +11,17 @@ import Separator from '../../Separator/index';
 // For more see: https://reactjs.org/docs/lists-and-keys.html#keys
 
 // List will include a separator prior to each genre property.
-
 const StatsList = ({ stats }) =>
   stats.reduce((elements, { ID, Title }, index) => {
     if (index < stats.length - 1) {
       elements.push(
-        <StatsNode key={ID} value={Title.toUpperCase()} />,
-        <StatsNode key={`separator-${index}`} value={<Separator index={ID} />} />
+        <StatsNode
+          key={ID}
+          value={Title.toUpperCase()} />,
+        <StatsNode
+          key={`separator-${index}`}
+          value={<Separator index={ID} />}
+        />
       );
       return elements;
     }
@@ -27,4 +31,7 @@ const StatsList = ({ stats }) =>
     return elements;
   }, []);
 
+StatsList.propTypes = {
+  stats: T.arrayOf(T.object)
+};
 export default StatsList;

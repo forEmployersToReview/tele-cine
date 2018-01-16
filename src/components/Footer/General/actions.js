@@ -1,4 +1,7 @@
+// // Modules
 import React from 'react';
+
+// Components
 import Icon from '../../Icon';
 
 const actions_dictionary = [
@@ -21,11 +24,11 @@ const actions_dictionary = [
 ];
 
 const Actions = () => (
-  <section className="action-wrapper">
+  <section className='action-wrapper'>
     {actions_dictionary.map(({ icon, description }, index) => (
-      <div className="action-component" key={`icon-${index}`}>
+      <div className='action-component' key={`icon-${index}`}>
         <Icon target_class={`action-icon ${icon}`} icon={icon} />
-        <p className="action-title">{description}</p>
+        <p className='action-title'>{description}</p>
       </div>
     ))}
   </section>

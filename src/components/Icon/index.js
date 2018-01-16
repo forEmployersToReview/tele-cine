@@ -2,8 +2,8 @@
 import React from 'react';
 import { PropTypes as T } from 'prop-types';
 
-const Icon = ({ handle_icon, icon, target_class }) => (
-  <i className={`material-icons ${target_class}`} onClick={handle_icon}>
+const Icon = ({ handle_icon, icon, target_class, id }) => (
+  <i id={id} className={`material-icons ${target_class}`} onClick={handle_icon}>
     {icon}
   </i>
 );
@@ -11,7 +11,8 @@ const Icon = ({ handle_icon, icon, target_class }) => (
 Icon.propTypes = {
   handle_icon: T.func,
   icon: T.string,
-  target_class: T.string
+  target_class: T.string,
+  id: T.string
 };
 
 export default Icon;

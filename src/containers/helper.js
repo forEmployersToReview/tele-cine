@@ -13,3 +13,33 @@ export const stats = (genres, year) => {
   }
   return;
 };
+
+export const scroll = (direction, container) => {
+  let node = document.getElementById(container);
+  const left = () => node.scrollLeft -= 4;
+  const right = () => node.scrollLeft += 4;
+  const options = [left, right];
+
+  const sub_routine = (index) => {
+    if (index < 162) {
+      setTimeout(() => {
+        options[direction]();
+        sub_routine(index + 4);
+      }, 4);
+    }
+  }
+
+  return sub_routine(0);
+};
+
+
+export const format_duration = duration => {
+  let hour = duration,
+    minute = duration;
+  if (duration > 59) {
+    hour = Math.ceil(duration / 60);
+    minute = Math.ceil(duration % 60);
+    return `${hour}h ${!!minute ? `${minute}min` : '' }`;
+  }
+  return `${minute}min`;
+};

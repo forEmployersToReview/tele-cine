@@ -1,4 +1,7 @@
+// Modules
 import React from 'react';
+
+// Components
 import General from '../General/';
 import Cast from '../Cast/';
 import Awards from '../Awards/';

@@ -1,15 +1,25 @@
+// Modules
 import React from 'react';
-// A separatorType can be / or \ or | or *, you get the point. `/` is the fallback.
-// index can be used for a case where Separator is part of a iteration of kind.
+import { PropTypes as T } from 'prop-types';
 
-const Separator = ({ index, separatorType, target_class }) => (
+// A separator_type can be / or \ or | or *, you get the point any key you'd like, even another component would fit well for this case. 
+// `/` is the fallback.
+// index can be used for a case where Separator is part of a iteration of some kind.
+
+const Separator = ({ index, separator_type, target_class }) => (
   <span key={`separator-${index}`} className={`separator ${target_class}`}>
-    {separatorType}
+    {separator_type}
   </span>
 );
 
 Separator.defaultProps = {
-  separatorType: '/'
+  separator_type: '/'
+}
+
+Separator.propTypes = {
+  index: T.string,
+  separator_type: T.string,
+  target_class: T.string
 }
 
 export default Separator;

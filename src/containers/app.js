@@ -1,4 +1,8 @@
+
+// Modules
 import React, { Component } from 'react';
+
+// API
 import { fetch_serie, fetch_episodes } from '../api/index';
 
 // Components
@@ -40,9 +44,9 @@ class App extends Component {
       episode_selected,
       temps
     } = this.state;
-    const { Cast, Genres, Images, Synopsis, Title, Year, Stats } = serie;
+    const { Cast, Images, Synopsis, Title, Stats } = serie;
     return (
-      <div className="serie-root">
+      <div className='serie-root'>
         <PageBackground images={Images} />
         <Header stats={Stats} title={Title} />
         <Footer synopsis={Synopsis} cast={Cast} />

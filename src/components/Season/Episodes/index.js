@@ -30,4 +30,5 @@ const Episodes = ({
 Episodes.defaultProps = {
   episodes: []
 };
+
 export default Episodes;
