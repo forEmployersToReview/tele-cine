@@ -24,7 +24,7 @@ class Footer extends Component {
       <div className='serie-detailed-content'>
         <div className='serie-footer-nav-wrapper'>
           <Tabs menu={menu} selected_tab={menu_index} handle_tab={menu_index => this.setState({ menu_index })} />
-          <a href='https://www.telecineplay.com.br'>
+          <a href='https://www.telecineplay.com.br' className='logo-wrapper'>
             <img alt='Place description in here' src={company_logo} className='logo' />
           </a>
         </div>

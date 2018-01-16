@@ -20,6 +20,7 @@
   color: #282828;
   font-size: 50px;
   transition: color 0.2s ease-in-out;
+  user-select: none;
   &:hover {
     color: white;
     cursor: pointer;

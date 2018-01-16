@@ -57,12 +57,16 @@
   height: 30px;
   filter: grayscale(100%);
   position: relative;
+  border-radius: 2px;
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+.logo-wrapper {
+  position: relative;
   bottom: 15px;
   right: 50px;
   border-radius: 2px;
-  &:hover {
-    filter: none;
-  }
 }
 
 .share {

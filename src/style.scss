@@ -21,6 +21,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Varela Round', sans-serif;
+  // Disabled selection for visualization purposes.
+  // Not a good  UX for larger applications.
+  user-select: none;
 }
 
 .border-bottom-effect {
