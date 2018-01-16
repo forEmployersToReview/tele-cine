@@ -60,6 +60,9 @@
   bottom: 15px;
   right: 50px;
   border-radius: 2px;
+  &:hover {
+    filter: none;
+  }
 }
 
 .share {
